@@ -1,0 +1,93 @@
+.leftSection {
+  display: flex;
+  align-items: center;
+  width: 284px;
+  transition: width 0.2s;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--primary-darker);
+  @media screen and (max-width: 768px) {
+    width: 0px;
+    overflow: hidden;
+  }
+}
+
+.leftSection > .top {
+  background-color: var(--white-opacity12);
+  padding: 40px 24px 34px 40px;
+  width: 100%;
+  border-bottom-right-radius: 44px;
+}
+
+.leftSection .nameContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.leftSection .positionContainer {
+  display: flex;
+  width: 100%;
+  height: 22px;
+  padding: 2px 16px 2px 16px;
+  gap: 8px;
+  border-radius: 80px;
+  background-color: var(--gray-opacity12);
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.leftSection .positionContainer > div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.leftSection .positionContainer > i {
+  background-color: var(--primary-lighter);
+  width: 1px;
+  height: 8px;
+}
+
+.leftSection .subInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+  width: 100%;
+}
+
+.leftSection .subInfoContainer > li {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.leftSection .subInfoContainer > li > img {
+  width: 12px;
+  height: 12px;
+}
+
+.leftSection .bottomContainer {
+  display: flex;
+  padding: 62px 24px 40px 40px;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.leftSection .bottomContainer > .countContainer {
+  margin-top: 20px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.leftSection .bottomContainer > .countContainer > li {
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+}
