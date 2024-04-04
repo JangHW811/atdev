@@ -4,7 +4,6 @@
   width: 284px;
   transition: width 0.2s;
   flex-direction: column;
-  height: 100%;
   background-color: var(--primary-darker);
 }
 @media screen and (max-width: 768px) {
@@ -104,6 +103,37 @@
   border: 1px solid var(--primary-opacity48);
   color: var(--primary-dark);
   gap: 4px;
+}
+.contents .selectboxContainer {
+  margin-top: 24px;
+  display: flex;
+  gap: 40px;
+}
+.contents .selectboxContainer > .item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.contents .selectboxContainer > .item > label {
+  padding: 0 14px;
+  height: 30px;
+}
+.contents .inputContainer {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.contents .inputContainer > .item {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.contents .inputContainer > .item > label {
+  padding: 0 14px;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+input {
+  &.input {
+    width: Fixed (200px) px;
+    height: var(--textfieldoutlinedmedium--height);
+    top: 19px;
+    left: 16px;
+    padding: 0px var(--textfieldoutlined--px) 0px var(--textfieldoutlined--px);
+    gap: 12px;
+    border-radius: var(--textfieldoutlined--radius);
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+  }
+}

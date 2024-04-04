@@ -3,4 +3,13 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  &.underline {
+    border: 0;
+    padding: 0 34px 0 14px;
+    height: 25px;
+    border-bottom: 1px solid var(--gray400);
+    background: url("../assets//images//Icon/select_arrow.svg") calc(100% - 5px)
+      center no-repeat;
+  }
 }

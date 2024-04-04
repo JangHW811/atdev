@@ -59,7 +59,7 @@ button .animate {
     transform: translate(-50%, -50%) scale(1);
   }
   100% {
-    transform: translate(-50%, -50%) scale(var(--material-scale));
+    transform: translate(-50%, -50%) scale(var(--ripple-scale));
     opacity: 0;
   }
 }
