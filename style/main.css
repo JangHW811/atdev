@@ -5,7 +5,7 @@
   transition: width 0.2s;
   flex-direction: column;
   background-color: var(--primary-darker);
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1440px) {
     width: 0px;
     overflow: hidden;
   }
@@ -90,6 +90,7 @@
   background-color: var(--white);
   border-radius: 8px;
   padding: 20px 24px;
+  box-sizing: border-box;
   .buttonContainer {
     margin-top: 24px;
     display: flex;
@@ -137,9 +138,126 @@
   }
 
   .searchButtonContainer {
-    margin-top: 24px;
+    margin: 24px 0;
     gap: 12px;
+  }
+
+  .tableContainer {
+    width: 100%;
+    border-top: 1px solid var(--gray-opacity28);
+    padding: 28px 24px;
+    .table {
+      margin-top: 24px;
+    }
+    .labelsContainer {
+      display: flex;
+      gap: 8px;
+      max-width: 130px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.rightContainer {
+  background-color: var(--primary-opacity4);
+  width: 396px;
+  margin-top: 24px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px 0px 0px 24px;
+  transition: all 0.2s;
+  @media screen and (max-width: 1200px) {
+    width: 0px;
+    overflow: hidden;
+  }
+  .paddingContainer {
+    padding: 40px;
+  }
+  .rangeContainer {
+    margin-top: 24px;
+    padding: 12px 8px 32px 8px;
+    border-bottom: 1px solid var(--gray-opacity28);
+    .track {
+      margin-top: 16px;
+      background-color: var(--gray-opacity28);
+      height: 6px;
+      border-radius: 3px;
+      width: 100%;
+      .progress {
+        background-color: var(--gray800);
+        height: 100%;
+        border-radius: 3px;
+        width: 10%;
+      }
+    }
+  }
+
+  .countContainer {
+    padding: 24px 0;
+    .titleContainer {
+      padding: 0 6px;
+    }
+    .colorContainer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      section {
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        flex: 1;
+        padding: 16px 26px;
+        border-radius: 6px;
+      }
+    }
+    .fileSizeContainer {
+      margin-top: 24px;
+      display: flex;
+      border-radius: 6px;
+      padding: 20px 8px;
+      gap: 8px;
+      background-color: var(--white-opacity32);
+      align-items: center;
+      justify-content: space-between;
+      > div {
+        display: flex;
+        gap: 8px;
+        align-items: inherit;
+      }
+    }
+  }
+
+  .tripleContainer {
+    margin: 24px 0;
     display: flex;
-    justify-content: flex-end;
+    gap: 4px;
+    > div {
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: center;
+      flex: 1;
+      padding: 8px 12px;
+      background-color: var(--gray-opacity12);
+      > .topGap {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        gap: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .buttonContainer {
+    border-top: 1px solid var(--gray-opacity28);
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
   }
 }

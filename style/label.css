@@ -6,19 +6,18 @@ label.label {
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
+  min-width: 30px;
+  width: fit-content;
 }
 
 label.large {
-  height: 32px;
   padding: 6px 8px;
 }
 
 label.medium {
-  height: 28px;
   padding: 4px 8px;
 }
 
 label.small {
-  height: 24px;
   padding: 2px 8px;
 }

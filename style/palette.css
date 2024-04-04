@@ -39,6 +39,33 @@
   --info-opacity8: #2199f114;
   --info-opacity28: #2199f147;
   --info-opacity48: #2199f17a;
+
+  --success-lighter: #c2f6ae;
+  --success-light: #66c95b;
+  --success: #208d28;
+  --success-dark: #0e5f21;
+  --success-darker: #074119;
+  --success-opacity8: #208d2814;
+  --success-opacity28: #208d2847;
+  --success-opacity48: #208d287a;
+
+  --error-lighter: #fdc0ab;
+  --error-light: #f86d60;
+  --error: #d12030;
+  --error-dark: #8f1212;
+  --error-darker: #630000;
+  --error-opacity8: #d1203014;
+  --error-opacity28: #d1203047;
+  --error-opacity48: #d120307a;
+
+  --warning-lighter: #fff3d5;
+  --warning-light: #ffd181;
+  --warning: #ffa02e;
+  --warning-dark: #b75f17;
+  --warning-darker: #7a3108;
+  --warning-opacity8: #ffa02e14;
+  --warning-opacity28: #ffa02e47;
+  --warning-opacity48: #ffa02e7a;
 }
 
 .primaryLighterBackground {
@@ -271,4 +298,260 @@
 
 .whiteOpacity48Color {
   color: var(--white-opacity48);
+}
+
+.infoLighterBackground {
+  background-color: var(--info-lighter);
+}
+
+.infoLightBackground {
+  background-color: var(--info-light);
+}
+
+.infoBackground {
+  background-color: var(--info);
+}
+
+.infoDarkBackground {
+  background-color: var(--info-dark);
+}
+
+.infoDarkerBackground {
+  background-color: var(--info-darker);
+}
+
+.infoOpacity8Background {
+  background-color: var(--info-opacity8);
+}
+
+.infoOpacity28Background {
+  background-color: var(--info-opacity28);
+}
+
+.infoOpacity48Background {
+  background-color: var(--info-opacity48);
+}
+
+.successLighterBackground {
+  background-color: var(--success-lighter);
+}
+
+.successLightBackground {
+  background-color: var(--success-light);
+}
+
+.successBackground {
+  background-color: var(--success);
+}
+
+.successDarkBackground {
+  background-color: var(--success-dark);
+}
+
+.successDarkerBackground {
+  background-color: var(--success-darker);
+}
+
+.successOpacity8Background {
+  background-color: var(--success-opacity8);
+}
+
+.successOpacity28Background {
+  background-color: var(--success-opacity28);
+}
+
+.successOpacity48Background {
+  background-color: var(--success-opacity48);
+}
+
+.errorLighterBackground {
+  background-color: var(--error-lighter);
+}
+
+.errorLightBackground {
+  background-color: var(--error-light);
+}
+
+.errorBackground {
+  background-color: var(--error);
+}
+
+.errorDarkBackground {
+  background-color: var(--error-dark);
+}
+
+.errorDarkerBackground {
+  background-color: var(--error-darker);
+}
+
+.errorOpacity8Background {
+  background-color: var(--error-opacity8);
+}
+
+.errorOpacity28Background {
+  background-color: var(--error-opacity28);
+}
+
+.errorOpacity48Background {
+  background-color: var(--error-opacity48);
+}
+
+.warningLighterBackground {
+  background-color: var(--warning-lighter);
+}
+
+.warningLightBackground {
+  background-color: var(--warning-light);
+}
+
+.warningBackground {
+  background-color: var(--warning);
+}
+
+.warningDarkBackground {
+  background-color: var(--warning-dark);
+}
+
+.warningDarkerBackground {
+  background-color: var(--warning-darker);
+}
+
+.warningOpacity8Background {
+  background-color: var(--warning-opacity8);
+}
+
+.warningOpacity28Background {
+  background-color: var(--warning-opacity28);
+}
+
+.warningOpacity48Background {
+  background-color: var(--warning-opacity48);
+}
+
+.infoLighterColor {
+  color: var(--info-lighter);
+}
+
+.infoLightColor {
+  color: var(--info-light);
+}
+
+.infoColor {
+  color: var(--info);
+}
+
+.infoDarkColor {
+  color: var(--info-dark);
+}
+
+.infoDarkerColor {
+  color: var(--info-darker);
+}
+
+.infoOpacity8Color {
+  color: var(--info-opacity8);
+}
+
+.infoOpacity28Color {
+  color: var(--info-opacity28);
+}
+
+.infoOpacity48Color {
+  color: var(--info-opacity48);
+}
+
+.successLighterColor {
+  color: var(--success-lighter);
+}
+
+.successLightColor {
+  color: var(--success-light);
+}
+
+.successColor {
+  color: var(--success);
+}
+
+.successDarkColor {
+  color: var(--success-dark);
+}
+
+.successDarkerColor {
+  color: var(--success-darker);
+}
+
+.successOpacity8Color {
+  color: var(--success-opacity8);
+}
+
+.successOpacity28Color {
+  color: var(--success-opacity28);
+}
+
+.successOpacity48Color {
+  color: var(--success-opacity48);
+}
+
+.errorLighterColor {
+  color: var(--error-lighter);
+}
+
+.errorLightColor {
+  color: var(--error-light);
+}
+
+.errorColor {
+  color: var(--error);
+}
+
+.errorDarkColor {
+  color: var(--error-dark);
+}
+
+.errorDarkerColor {
+  color: var(--error-darker);
+}
+
+.errorOpacity8Color {
+  color: var(--error-opacity8);
+}
+
+.errorOpacity28Color {
+  color: var(--error-opacity28);
+}
+
+.errorOpacity48Color {
+  color: var(--error-opacity48);
+}
+
+.warningLighterColor {
+  color: var(--warning-lighter);
+}
+
+.warningLightColor {
+  color: var(--warning-light);
+}
+
+.warningColor {
+  color: var(--warning);
+}
+
+.warningDarkColor {
+  color: var(--warning-dark);
+}
+
+.warningDarkerColor {
+  color: var(--warning-darker);
+}
+
+.warningOpacity8Color {
+  color: var(--warning-opacity8);
+}
+
+.warningOpacity28Color {
+  color: var(--warning-opacity28);
+}
+
+.warningOpacity48Color {
+  color: var(--warning-opacity48);
 }
