@@ -1,13 +1,21 @@
-input.input {
-  width: Fixed 200px px;
-  height: var(--textfieldoutlinedmedium--height);
-  top: 19px;
-  left: 16px;
-  padding: 0px var(--textfieldoutlined--px) 0px var(--textfieldoutlined--px);
-  gap: 12px;
-  border-radius: var(--textfieldoutlined--radius);
-  border: 1px 0px 0px 0px;
-  opacity: 0px;
+input {
+  &.input {
+    height: 54px;
+    padding: 18px 14px;
+    border-radius: 8px;
+    font-family: Pretendard;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    box-sizing: border-box;
+    flex: 1;
+    border: 1px solid var(--gray-opacity28);
+    &::placeholder {
+      color: var(--gray500);
+    }
+    &:disabled {
+      background-color: var(--gray-opacity12);
+      border: 0;
+    }
+  }
 }
-
-/*# sourceMappingURL=input.css.map */

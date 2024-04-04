@@ -9,6 +9,7 @@
   --primary-opacity12: #1a52de1f;
   --primary-opacity28: #1a52de47;
   --primary-opacity48: #1a52de7a;
+
   --gray100: #f9fafb;
   --gray200: #f4f6f8;
   --gray300: #dfe3e8;
@@ -21,6 +22,7 @@
   --gray-opacity12: #919eab1f;
   --gray-opacity28: #919eab47;
   --gray-opacity48: #919eab7a;
+
   --white: #ffffff;
   --white-opacity8: #ffffff14;
   --white-opacity12: #ffffff1f;
@@ -28,6 +30,7 @@
   --white-opacity24: #ffffff3d;
   --white-opacity32: #ffffff52;
   --white-opacity48: #ffffff7a;
+
   --info-lighter: #d5edff;
   --info-light: #9dd5ff;
   --info: #2199f1;
@@ -269,5 +272,3 @@
 .whiteOpacity48Color {
   color: var(--white-opacity48);
 }
-
-/*# sourceMappingURL=palette.css.map */
