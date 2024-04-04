@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/global.css" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+      .title {
+        min-width: 100px;
+      }
+      body {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    공통 컬러값은 palette.css에 정의되어 있습니다.
+    <section class="container">
+      <div class="title">button</div>
+      <button class="button large">날 눌러줘</button>
+      <button class="button medium">날 눌러줘</button>
+      <button class="button small">날 눌러줘</button>
+      <button class="button large primaryLightBackground gray500Color">
+        날 눌러줘
+      </button>
+    </section>
+    <section class="container">
+      <div class="title">font</div>
+      <div class="h1">h1</div>
+      <div class="h2">h2</div>
+      <div class="h3">h3</div>
+      <div class="h4">h4</div>
+      <div class="h5">h5</div>
+      <div class="h6">h6</div>
+      <div class="subtitle1">subtitle1</div>
+      <div class="subtitle2">subtitle2</div>
+      <div class="body1">body1</div>
+      <div class="body2">body2</div>
+      <div class="caption">caption</div>
+      <div class="overline">overline</div>
+      <div class="title">title</div>
+    </section>
+    <section class="container">
+      <div class="title">label</div>
+      <label class="label large gray400Background gray800Color"
+        >나는야 라벨</label
+      >
+      <label class="label medium primaryLightBackground gray800Color"
+        >나는야 라벨</label
+      >
+      <label class="label small gray300Background primaryLightColor"
+        >나는야 라벨</label
+      >
+    </section>
+    <section class="container">
+      <div class="title">select</div>
+      <select class="underline">
+        <option>선택해주세요</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </section>
+    <section class="container">
+      <div class="title">input</div>
+      <input type="text" class="input" placeholder="무언갈 입력해주세요." />
+      <input
+        type="text"
+        class="input"
+        placeholder="무언갈 입력해주세요."
+        disabled
+      />
+    </section>
+  </body>
+</html>

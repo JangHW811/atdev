@@ -54,7 +54,9 @@
         <article class="bottomContainer">
           <span class="overline gray500Color">ACTIVE</span>
           <ul class="countContainer">
-            <button class="button medium primaryBackground whiteColor fill">
+            <button
+              class="material-ripple button medium primaryBackground whiteColor fill"
+            >
               신규 등록 바로가기
             </button>
             <li class="body2 primaryLighterColor">
@@ -91,7 +93,81 @@
           </ul>
         </article>
       </section>
-      본문
+      <section class="contents">
+        <div class="gray800Color h6">Search Filter</div>
+        <article class="buttonContainer">
+          <button class="button medium">
+            <img src="../assets/images/Icon/filled/User.svg" alt="user" />
+            작성자 선택
+          </button>
+          <button class="button medium">
+            <img src="../assets/images/Icon/filled/Case-blue.svg" alt="case" />
+            부서명 선택
+          </button>
+          <button class="button medium">
+            <img
+              src="../assets/images/Icon/filled/calendar-dates.svg"
+              alt="calendar"
+            />
+            작성일자 선택
+          </button>
+        </article>
+        <article class="selectboxContainer">
+          <div class="item">
+            <label class="overline gray600Color">작업 구분</label>
+            <select class="underline">
+              <option>선택</option>
+              <option>작업1</option>
+              <option>작업2</option>
+              <option>작업3</option>
+            </select>
+          </div>
+          <div class="item">
+            <label class="overline gray600Color">언어</label>
+            <select class="underline">
+              <option>선택</option>
+              <option>언어1</option>
+              <option>언어2</option>
+              <option>언어3</option>
+            </select>
+          </div>
+          <div class="item">
+            <label class="overline gray600Color">타입</label>
+            <select class="underline">
+              <option>선택</option>
+              <option>타입1</option>
+              <option>타입2</option>
+              <option>타입3</option>
+            </select>
+          </div>
+        </article>
+        <article class="inputContainer">
+          <div class="item">
+            <label class="subtitle2 gray600Color">검색어</label>
+            <input
+              type="text"
+              class="input outline"
+              placeholder="검색어를 입력해주세요."
+            />
+          </div>
+          <div class="item">
+            <label class="subtitle2 gray600Color">검색어</label>
+            <input
+              type="text"
+              class="input outline"
+              placeholder="단어를 입력해주세요."
+            />
+          </div>
+        </article>
+        <article class="searchButtonContainer">
+          <button class="button medium gray600Background">
+            <img src="../assets/images/Icon/rotate.svg" alt="refresh" />
+          </button>
+          <button class="button medium gray800Background whiteColor">
+            Search
+          </button>
+        </article>
+      </section>
     </section>
   </body>
 </html>
