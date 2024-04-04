@@ -6,25 +6,24 @@
   flex-direction: column;
   height: 100%;
   background-color: var(--primary-darker);
-  @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 768px) {
+  .leftSection {
     width: 0px;
     overflow: hidden;
   }
 }
-
-.leftSection > .top {
+.leftSection .top {
   background-color: var(--white-opacity12);
   padding: 40px 24px 34px 40px;
   width: 100%;
   border-bottom-right-radius: 44px;
 }
-
 .leftSection .nameContainer {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
 }
-
 .leftSection .positionContainer {
   display: flex;
   width: 100%;
@@ -37,7 +36,6 @@
   align-items: center;
   margin-top: 16px;
 }
-
 .leftSection .positionContainer > div {
   flex: 1;
   display: flex;
@@ -48,7 +46,6 @@
   width: 1px;
   height: 8px;
 }
-
 .leftSection .subInfoContainer {
   display: flex;
   flex-direction: column;
@@ -56,7 +53,6 @@
   margin-top: 32px;
   width: 100%;
 }
-
 .leftSection .subInfoContainer > li {
   display: flex;
   gap: 8px;
@@ -64,12 +60,10 @@
   align-items: center;
   justify-content: flex-start;
 }
-
 .leftSection .subInfoContainer > li > img {
   width: 12px;
   height: 12px;
 }
-
 .leftSection .bottomContainer {
   display: flex;
   padding: 62px 24px 40px 40px;
@@ -78,16 +72,38 @@
   height: 100%;
   width: 100%;
 }
-
 .leftSection .bottomContainer > .countContainer {
   margin-top: 20px;
   display: flex;
   gap: 24px;
   flex-direction: column;
 }
-
 .leftSection .bottomContainer > .countContainer > li {
   padding: 0 8px;
   display: flex;
   justify-content: space-between;
 }
+
+.contents {
+  margin: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  background-color: var(--white);
+  padding: 20px 24px;
+}
+.contents .buttonContainer {
+  margin-top: 24px;
+  display: flex;
+  gap: 20px;
+}
+.contents .buttonContainer > button {
+  flex: 1;
+  background-color: var(--white);
+  border: 1px solid var(--primary-opacity48);
+  color: var(--primary-dark);
+  gap: 4px;
+}
+
+/*# sourceMappingURL=main.css.map */
