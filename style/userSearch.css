@@ -25,10 +25,24 @@
       width: 400px;
       display: flex;
     }
-    .buttonContainer {
-      display: flex;
-      gap: 12px;
-    }
     border-bottom: 1px solid var(--gray-opacity28);
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 12px;
+    &.bottomArea {
+      justify-content: flex-end;
+      margin-top: 28px;
+      .button {
+        color: #fff;
+        background-color: var(--primary-dark);
+        width: 96px;
+      }
+      .button:first-child {
+        color: var(--gray900);
+        background-color: unset;
+      }
+    }
   }
 }

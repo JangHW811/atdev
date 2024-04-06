@@ -64,7 +64,7 @@ body.showModal {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 9000;
+    z-index: 1;
     background-color: #00000070;
     width: 100vw;
     height: 100vh;
@@ -77,6 +77,12 @@ body.showModal {
       max-width: 70vw;
       border-radius: 24px;
       margin: auto;
+      @media screen and (max-width: 768px) {
+        width: 100vw;
+        height: 100vh;
+        max-width: unset;
+        border-radius: 0;
+      }
     }
   }
 }
