@@ -1,5 +1,4 @@
 $(document).ready(() => {
-  $("#header").load("../html/header.html");
   Array.from(document.querySelectorAll("button")).forEach((item) => {
     item.addEventListener("click", function (e) {
       const ripple = document.createElement("div"),
@@ -15,4 +14,20 @@ $(document).ready(() => {
         }, 500);
     });
   });
+});
+
+const showModal = (modalId) => {
+  const modal = $(`#${modalId}`);
+  $("body").addClass("showModal");
+  const url = modal.data("url");
+  modal.load(url);
+};
+
+$(document).on("click", "#mask", function () {
+  $("body").removeClass("showModal");
+  $(".modal").html("");
+});
+
+$(document).on("click", ".modal", function (event) {
+  event.stopPropagation();
 });

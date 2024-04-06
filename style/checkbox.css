@@ -1,0 +1,14 @@
+input {
+  &[type="checkbox"] {
+    display: none;
+  }
+  &[type="checkbox"] + label {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    background: url("../assets/images/Icon/Square_Box.svg");
+  }
+  &[type="checkbox"]:checked + label {
+    background: url("../assets/images/Icon/Square_Check.svg");
+  }
+}

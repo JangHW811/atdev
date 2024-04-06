@@ -214,23 +214,6 @@
         max-width: 130px;
         flex-wrap: wrap;
       }
-      .paginationContainer {
-        margin-top: 12px;
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        align-items: center;
-        > a {
-          width: 20px;
-          color: var(--gray500);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          &.active {
-            color: var(--primary);
-          }
-        }
-      }
     }
   }
 
