@@ -1,30 +1,68 @@
 const setChart = () => {
-  const config = {
+  var ctx = document.getElementById("chartArea").getContext("2d");
+  var myChart = new Chart(ctx, {
     type: "bar",
-    data: data,
-    options: {
-      plugins: {
-        title: {
-          display: true,
-          text: "Chart.js Bar Chart - Stacked",
+    data: {
+      labels: ["영상회의", "음성회의", "번역"],
+      datasets: [
+        {
+          label: "data1",
+          backgroundColor: "#000f36",
+          data: [44, 16, 45],
         },
+        {
+          label: "data2",
+          backgroundColor: "#002d9d",
+          data: [16, 66, 15],
+        },
+        {
+          label: "data3",
+          backgroundColor: "#1a52de",
+          data: [52, 14, 15],
+        },
+        {
+          label: "data4",
+          backgroundColor: "#acc1fd",
+          data: [25, 33, 15],
+        },
+      ],
+    },
+    options: {
+      tooltips: {
+        displayColors: true,
+        callbacks: {
+          mode: "x",
+        },
+      },
+      scales: {
+        xAxes: [
+          {
+            stacked: true,
+            barThickness: 20,
+            gridLines: {
+              display: false,
+            },
+          },
+        ],
+        yAxes: [
+          {
+            stacked: true,
+            ticks: {
+              beginAtZero: true,
+            },
+            type: "linear",
+          },
+        ],
       },
       responsive: true,
-      scales: {
-        x: {
-          stacked: true,
-        },
-        y: {
-          stacked: true,
-        },
-      },
+      maintainAspectRatio: false,
+      legend: { position: "bottom" },
     },
-  };
+  });
 };
 
 $(document).ready(() => {
   $(document).on("click", ".closeCollapseButton", function () {
-    console.log("???", this);
     const collapse = $(this).closest(".collapse");
     collapse.addClass("close");
     setTimeout(() => {

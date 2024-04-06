@@ -370,4 +370,9 @@
     gap: 12px;
     flex-direction: column;
   }
+  #chartArea {
+    max-height: 250px;
+    margin: 20px 0;
+    width: 100%;
+  }
 }
