@@ -1,23 +1,29 @@
-label.label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  min-width: 30px;
-  width: fit-content;
-}
-
-label.large {
-  padding: 6px 8px;
-}
-
-label.medium {
-  padding: 4px 8px;
-}
-
-label.small {
-  padding: 2px 8px;
+label {
+  &.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    min-width: 30px;
+    width: fit-content;
+    box-sizing: border-box;
+  }
+  &.large {
+    padding: 6px 8px;
+  }
+  &.medium {
+    padding: 4px 8px;
+  }
+  &.small {
+    padding: 2px 8px;
+  }
+  &.mobile {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gray600);
+  }
 }
