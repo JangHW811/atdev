@@ -6,92 +6,108 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" type="text/css" href="../style/global.css" />
   </head>
   <body>
     <header class="header title">Summary AI</header>
     <section class="container">
-      <section class="leftSection">
-        <article class="top">
-          <span class="overline gray500Color">PROFILE</span>
-          <div class="nameContainer">
-            <span class="h5 whiteColor">홍길동 님</span>
-            <a
-              ><img
-                src="../assets/images/Icon/filled/More_Vertical.svg"
-                alt="arrow"
-            /></a>
-          </div>
-          <div class="positionContainer">
-            <div class="caption primaryLighterColor">IT 개발</div>
-            <i></i>
-            <div class="caption primaryLighterColor">과장</div>
-          </div>
-          <ul class="subInfoContainer">
-            <li>
-              <img src="../assets/images/Icon/filled/Call.svg" alt="phone" />
-              <span class="caption gray400Color">010 1234 5677</span>
-            </li>
-            <li>
-              <img src="../assets/images/Icon/filled/Mail.svg" alt="email" />
-              <span class="caption gray400Color">ceo@atdev.com</span>
-            </li>
-            <li>
-              <img src="../assets/images/Icon/filled/Case.svg" alt="case" />
-              <span class="caption gray400Color">032 123 4567</span>
-            </li>
-            <li>
-              <img
-                src="../assets/images/Icon/filled/Location.svg"
-                alt="address"
-              />
-              <span class="caption gray400Color"
-                >경기도 수원시 영통구 영통로 217번길, 4층 4444호</span
+      <section class="leftSection collapse">
+        <div class="collapseContainer">
+          <a class="openCollapseButton"
+            ><img src="../assets/images/Icon/Burger.svg" alt="Burger"
+          /></a>
+        </div>
+        <div class="wideContainer">
+          <article class="top">
+            <div class="spaceBetween">
+              <span class="overline gray500Color">PROFILE</span>
+              <a class="closeCollapseButton"
+                ><img
+                  src="../assets/images/Icon/Chevron_Left_Duo_blue.svg"
+                  alt="arrow"
+              /></a>
+            </div>
+            <div class="nameContainer">
+              <span class="h5 whiteColor">홍길동 님</span>
+              <a
+                ><img
+                  src="../assets/images/Icon/filled/More_Vertical.svg"
+                  alt="arrow"
+              /></a>
+            </div>
+            <div class="positionContainer">
+              <div class="caption primaryLighterColor">IT 개발</div>
+              <i></i>
+              <div class="caption primaryLighterColor">과장</div>
+            </div>
+            <ul class="subInfoContainer">
+              <li>
+                <img src="../assets/images/Icon/filled/Call.svg" alt="phone" />
+                <span class="caption gray400Color">010 1234 5677</span>
+              </li>
+              <li>
+                <img src="../assets/images/Icon/filled/Mail.svg" alt="email" />
+                <span class="caption gray400Color">ceo@atdev.com</span>
+              </li>
+              <li>
+                <img src="../assets/images/Icon/filled/Case.svg" alt="case" />
+                <span class="caption gray400Color">032 123 4567</span>
+              </li>
+              <li>
+                <img
+                  src="../assets/images/Icon/filled/Location.svg"
+                  alt="address"
+                />
+                <span class="caption gray400Color"
+                  >경기도 수원시 영통구 영통로 217번길, 4층 4444호</span
+                >
+              </li>
+            </ul>
+          </article>
+          <article class="bottomContainer">
+            <span class="overline gray500Color">ACTIVE</span>
+            <ul class="countContainer">
+              <button
+                class="material-ripple button medium primaryBackground whiteColor fill"
               >
-            </li>
-          </ul>
-        </article>
-        <article class="bottomContainer">
-          <span class="overline gray500Color">ACTIVE</span>
-          <ul class="countContainer">
-            <button
-              class="material-ripple button medium primaryBackground whiteColor fill"
-            >
-              신규 등록 바로가기
-            </button>
-            <li class="body2 primaryLighterColor">
-              분석 완료 회의록
-              <label
-                class="label small grayOpacity12Background primaryLightColor"
-                >13개</label
-              >
-            </li>
-            <li class="body2 primaryLighterColor">
-              번역 요청 동영상<label
-                class="label small grayOpacity12Background primaryLightColor"
-                >13개</label
-              >
-            </li>
-            <li class="body2 primaryLighterColor">
-              현재 진행 분석 건수<label
-                class="label small grayOpacity12Background primaryLightColor"
-                >13개</label
-              >
-            </li>
-            <li class="body2 primaryLighterColor">
-              현재 번역 진행 건수<label
-                class="label small grayOpacity12Background primaryLightColor"
-                >13개</label
-              >
-            </li>
-            <li class="body2 primaryLighterColor">
-              번역・분석 실패 건수<label
-                class="label small grayOpacity12Background primaryLightColor"
-                >13개</label
-              >
-            </li>
-          </ul>
-        </article>
+                신규 등록 바로가기
+              </button>
+              <li class="body2 primaryLighterColor">
+                분석 완료 회의록
+                <label
+                  class="label small grayOpacity12Background primaryLightColor"
+                  >13개</label
+                >
+              </li>
+              <li class="body2 primaryLighterColor">
+                번역 요청 동영상<label
+                  class="label small grayOpacity12Background primaryLightColor"
+                  >13개</label
+                >
+              </li>
+              <li class="body2 primaryLighterColor">
+                현재 진행 분석 건수<label
+                  class="label small grayOpacity12Background primaryLightColor"
+                  >13개</label
+                >
+              </li>
+              <li class="body2 primaryLighterColor">
+                현재 번역 진행 건수<label
+                  class="label small grayOpacity12Background primaryLightColor"
+                  >13개</label
+                >
+              </li>
+              <li class="body2 primaryLighterColor">
+                번역・분석 실패 건수<label
+                  class="label small grayOpacity12Background primaryLightColor"
+                  >13개</label
+                >
+              </li>
+            </ul>
+          </article>
+        </div>
       </section>
       <!-- leftSection -->
 
@@ -191,7 +207,12 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td>
+                  <div class="elipssis">
+                    개발 진척률 보고개발 진척률 보고개발 진척률 보고개발 진척률
+                    보고개발 진척률 보고
+                  </div>
+                </td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -223,7 +244,7 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td><div class="elipssis">개발 진척률 보고</div></td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -255,7 +276,7 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td><div class="elipssis">개발 진척률 보고</div></td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -291,7 +312,7 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td><div class="elipssis">개발 진척률 보고</div></td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -327,7 +348,7 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td><div class="elipssis">개발 진척률 보고</div></td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -363,7 +384,7 @@
                 <td>홍길동</td>
                 <td>개발팀</td>
                 <td>B-4-1</td>
-                <td>개발 진척률 보고</td>
+                <td><div class="elipssis">개발 진척률 보고</div></td>
                 <td>
                   <div class="labelsContainer">
                     <label
@@ -400,16 +421,36 @@
               </tr>
             </tbody>
           </table>
+          <div class="paginationContainer">
+            <a class="prev"><img src="../assets/images/Icon/left.svg" alt="more" /></a>
+            <a class="caption active">1</a>
+            <a class="caption">2</a>
+            <a class="caption">3</a>
+            <a class="caption">4</a>
+            <a class="caption">5</a>
+            <a class="next"><img src="../assets/images/Icon/right.svg" alt="more" /></a>
         </article>
       </section>
       <!-- contents -->
-      <section class="rightContainer">
+      <section class="rightContainer collapse">
         <div class="collapseContainer">
-          <img src="../assets/images/Icon/Arrow_Left.svg" alt="Arrow" />
-          <img src="../assets/images/Icon/Chart.svg" alt="chart" />
+          <a class="openCollapseButton"
+            ><img
+              src="../assets/images/Icon/Chevron_Left_Duo.svg"
+              alt="Chevron_Left_Duo"
+          /></a>
+          <div class="overline">REPORT</div>
         </div>
         <article class="paddingContainer">
-          <span class="gray800Color h5">Daily Report</span>
+          <div class="spaceBetween">
+            <span class="gray800Color h5">Daily Report</span>
+            <a class="closeCollapseButton">
+              <img
+                src="../assets/images/Icon/Arrow_Right.svg"
+                alt="Arrow_Right"
+            /></a>
+          </div>
+
           <div class="rangeContainer">
             <div class="spaceBetween">
               <span class="sub2">금일 회의 진행</span>
@@ -491,8 +532,9 @@
               관리자 바로가기
             </button>
           </div>
-        </article>
-      </section>
-    </section>
+        </article><!-- paddingContainer -->
+        <div class="chartArea"></div>
+      </section><!-- rightContainer -->
+    </section><!-- container -->
   </body>
 </html>

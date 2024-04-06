@@ -43,6 +43,7 @@ button {
 
 a {
   cursor: pointer;
+  display: inline-flex;
 }
 
 ul {
@@ -99,4 +100,10 @@ ul {
 .flexWrap {
   display: flex;
   flex-wrap: wrap;
+}
+
+.elipssis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

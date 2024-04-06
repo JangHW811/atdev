@@ -21,7 +21,7 @@ table {
       height: 64px;
     }
     td {
-      padding: 8px 0px;
+      padding: 8px;
     }
     td:first-child {
       text-align: start;
