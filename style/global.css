@@ -74,10 +74,11 @@ body.showModal {
     .modal {
       background-color: #fff;
       padding: 40px;
-      max-width: 70vw;
       border-radius: 24px;
+      width: auto;
       margin: auto;
       @media screen and (max-width: 768px) {
+        padding: 16px;
         width: 100vw;
         height: 100vh;
         max-width: unset;

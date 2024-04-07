@@ -14,6 +14,7 @@
     <section class="web">
       <header class="header title">Summary AI</header>
       <section class="container">
+        <div class="mobileMask"></div>
         <section class="leftSection collapse">
           <div class="collapseContainer">
             <a class="openCollapseButton"
@@ -75,10 +76,22 @@
               <span class="overline gray500Color">ACTIVE</span>
               <ul class="countContainer">
                 <button
+                  class="material-ripple button medium primaryBackground whiteColor fill faqButton"
+                >
+                  FAQ 바로가기
+                </button>
+                <button
                   class="material-ripple button medium primaryBackground whiteColor fill"
                 >
                   신규 등록 바로가기
                 </button>
+                <li class="body2 primaryLighterColor">
+                  내가 쓴 회의록
+                  <label
+                    class="label small grayOpacity12Background primaryLightColor"
+                    >13개</label
+                  >
+                </li>
                 <li class="body2 primaryLighterColor">
                   분석 완료 회의록
                   <label
@@ -225,8 +238,7 @@
                   </td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >애국가 번역</label
                       >
                     </div>
@@ -257,8 +269,7 @@
                   <td><div class="elipssis">개발 진척률 보고</div></td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >개발</label
                       >
                     </div>
@@ -289,12 +300,10 @@
                   <td><div class="elipssis">개발 진척률 보고</div></td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >개발</label
                       >
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >애국가 번역</label
                       >
                     </div>
@@ -325,12 +334,10 @@
                   <td><div class="elipssis">개발 진척률 보고</div></td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >개발</label
                       >
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >애국가 번역</label
                       >
                     </div>
@@ -361,12 +368,10 @@
                   <td><div class="elipssis">개발 진척률 보고</div></td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >개발</label
                       >
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >일정</label
                       >
                     </div>
@@ -397,16 +402,13 @@
                   <td><div class="elipssis">개발 진척률 보고</div></td>
                   <td>
                     <div class="labelsContainer">
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >개발</label
                       >
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >일정</label
                       >
-                      <label
-                        class="label medium infoOpacity8Background primaryDarkColor"
+                      <label class="infoOpacity8Background primaryDarkColor"
                         >애국가 번역</label
                       >
                     </div>
@@ -523,14 +525,17 @@
               </div>
               <div>
                 <div class="topGap">
-                  <img src="../assets/images/Icon/Video.svg" alt="Video" />
+                  <img
+                    src="../assets/images/Icon/IconMicrophone.svg"
+                    alt="Video"
+                  />
                   <span>음성</span>
                 </div>
                 <div class="h4">3</div>
               </div>
               <div>
                 <div class="topGap">
-                  <img src="../assets/images/Icon/Video.svg" alt="Video" />
+                  <img src="../assets/images/Icon/Flag_gray.svg" alt="Video" />
                   <span>번역</span>
                 </div>
                 <div class="h4">5</div>
@@ -556,6 +561,7 @@
       <!-- container -->
     </section>
     <!-- web -->
+
     <section class="mobile">
       <header class="header">
         <article class="searchContainer">
@@ -567,6 +573,9 @@
             class="input mobile"
             placeholder="제목을 입력해주세요."
           />
+          <a class="mobileOpenCollapseButton">
+            <img src="../assets/images/Icon/burger_mobile.svg" alt="burger"
+          /></a>
         </article>
       </header>
       <section class="mobileBody">
@@ -591,10 +600,54 @@
           </div>
         </article>
         <div class="separatorHorizontal"></div>
+        <ul class="listContainer">
+          <li class="progress">
+            <div class="iconContainer">
+              <img src="../assets/images/Icon/Cloud_upload.svg" />
+            </div>
+            <div class="fontContainer">
+              <div class="subtitle1 gray500Color">PLM 고도화 프로젝트 회의</div>
+              <div class="caption gray500Color">홍길동 | 개발팀 | 회의</div>
+              <div class="spaceBetween">
+                <div class="status">분석중...</div>
+                <div class="overline gray500Color">2020-01-01</div>
+              </div>
+            </div>
+          </li>
+          <li class="done">
+            <div class="iconContainer">
+              <img src="../assets/images/Icon/check-circle.svg" />
+            </div>
+            <div class="fontContainer">
+              <div class="subtitle1 gray500Color">PLM 고도화 프로젝트 회의</div>
+              <div class="caption gray500Color">홍길동 | 개발팀 | 회의</div>
+              <div class="spaceBetween">
+                <div class="status">분석중...</div>
+                <div class="overline gray500Color">2020-01-01</div>
+              </div>
+            </div>
+          </li>
+          <li class="failed">
+            <div class="iconContainer">
+              <img src="../assets/images/Icon/Circle_Warning.svg" />
+            </div>
+            <div class="fontContainer">
+              <div class="subtitle1 gray500Color">PLM 고도화 프로젝트 회의</div>
+              <div class="caption gray500Color">홍길동 | 개발팀 | 회의</div>
+              <div class="spaceBetween">
+                <div class="status">분석중...</div>
+                <div class="overline gray500Color">2020-01-01</div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </section>
     </section>
+    <!-- mobile -->
+
     <div id="mask">
       <div id="userSearch" class="modal" data-url="user-search.html"></div>
     </div>
+    <!-- mask -->
   </body>
 </html>

@@ -9,6 +9,7 @@
   <div class="searchContainer">
     <div class="inputContainer">
       <input class="input" placeholder="이름을 입력하세요." />
+      <a><img src="../assets/images/Icon/Search.svg" alt="search" /></a>
     </div>
     <div class="buttonContainer">
       <button class="button medium gray600Background">
@@ -17,8 +18,18 @@
       <button class="button medium gray800Background whiteColor">Search</button>
     </div>
   </div>
-  <table class="searchList">
-    <thead>
+  <table class="searchList table">
+    <colgroup>
+      <!-- <col style="width: 52px"/> -->
+      <col style="" />
+      <col />
+      <col />
+      <col />
+      <col />
+      <col />
+      <col />
+    </colgroup>
+    <thead class="subtitle2">
       <tr>
         <td>
           <input type="checkbox" class="checkAll" id="checkAll" /><label
@@ -33,7 +44,7 @@
         <td>직책</td>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="body2">
       <tr>
         <td>
           <input type="checkbox" id="tableRow1" /><label
@@ -135,6 +146,17 @@
     <a class="caption">4</a>
     <a class="caption">5</a>
     <a class="next"><img src="../assets/images/Icon/right.svg" alt="more" /></a>
+  </div>
+  <div class="selectedItemContainer">
+    <label class="label large primaryOpacity12Background primaryDarkColor"
+      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a>
+    </label>
+    <label class="label large primaryOpacity12Background primaryDarkColor"
+      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
+    ></label>
+    <label class="label large primaryOpacity12Background primaryDarkColor"
+      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
+    ></label>
   </div>
   <div class="buttonContainer bottomArea">
     <button class="button large" onClick="closeModal()">닫기</button>

@@ -1,8 +1,18 @@
 .web {
-  @media screen and (max-width: 768px) {
+  .header {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .mobileMask {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: #00000070;
+    position: fixed;
     display: none;
   }
-
   .leftSection {
     display: flex;
     align-items: center;
@@ -15,7 +25,20 @@
       overflow: hidden;
     }
     @media screen and (max-width: 768px) {
+      width: 0;
+      position: absolute;
+      right: 0;
+    }
+    .faqButton {
       display: none;
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+    .closeCollapseButton {
+      @media screen and (max-width: 768px) {
+        transform: rotate(180deg);
+      }
     }
     .collapseContainer {
       padding: 12px;
@@ -53,6 +76,10 @@
       .wideContainer {
         display: block;
       }
+      @media screen and (max-width: 768px) {
+        position: absolute;
+        right: 0;
+      }
     }
     &.close {
       width: 48px;
@@ -62,6 +89,9 @@
       }
       .wideContainer {
         display: none;
+      }
+      @media screen and (max-width: 768px) {
+        width: 0;
       }
     }
     .top {
@@ -137,6 +167,9 @@
   }
 
   .contents {
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
     margin: 24px 16px;
     display: flex;
     flex-direction: column;
@@ -162,7 +195,7 @@
     .selectboxContainer {
       margin-top: 24px;
       display: flex;
-      gap: 40px;
+      gap: 20px;
       > .item {
         flex: 1;
         display: flex;
@@ -175,16 +208,16 @@
     }
 
     .inputContainer {
-      display: flex;
+      display: grid;
       gap: 20px;
       margin-top: 20px;
+      grid-template-columns: 1fr 1fr 1fr;
       > .item {
         flex: 1;
         display: flex;
         gap: 12px;
         align-items: center;
         > label {
-          padding: 0 14px;
           height: 30px;
           display: flex;
           align-items: center;
@@ -200,12 +233,12 @@
     .tableContainer {
       width: 100%;
       border-top: 1px solid var(--gray-opacity28);
-      padding: 28px 24px;
+      padding: 28px 0;
       .table {
         margin-top: 24px;
         .elipssis {
           max-width: 200px;
-          text-align: center;
+          text-align: left;
         }
       }
       .labelsContainer {
@@ -213,6 +246,11 @@
         gap: 8px;
         max-width: 130px;
         flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        label {
+          padding: 8px;
+        }
       }
     }
   }
@@ -385,9 +423,6 @@
     label {
       min-width: 88px;
     }
-    input {
-      max-width: 210px;
-    }
   }
 
   .countContainer {
@@ -421,5 +456,72 @@
     width: 100%;
     background-color: var(--gray-opacity28);
     margin: 12px 0;
+  }
+
+  .listContainer {
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    > li {
+      border-radius: 8px;
+      box-sizing: border-box;
+      padding: 16px 12px;
+      display: flex;
+      gap: 18px;
+      flex: 1;
+      > .iconContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      > .fontContainer {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        .status {
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 22px;
+          letter-spacing: -0.02em;
+        }
+      }
+      &.progress {
+        > .iconContainer {
+          background-color: var(--gray-opacity28);
+        }
+        .status {
+          color: var(--info);
+        }
+        background-color: var(--gray-opacity12);
+        border: 1px solid var(--gray-opacity28);
+      }
+      &.done {
+        > .iconContainer {
+          background-color: var(--success-opacity28);
+        }
+        .status {
+          color: var(--success);
+        }
+        background-color: var(--success-opacity8);
+        border: 1px solid var(--success-light);
+      }
+      &.failed {
+        > .iconContainer {
+          background-color: var(--error-opacity28);
+        }
+        .status {
+          color: var(--error);
+        }
+        background-color: var(--error-opacity8);
+        border: 1px solid var(--error-light);
+      }
+    }
+    .progress {
+    }
   }
 }

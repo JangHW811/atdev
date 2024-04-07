@@ -1,20 +1,23 @@
 table {
   &.table {
-    border-collapse: collapse;
     width: 100%;
     font-size: 14px;
+    overflow: hidden;
+    border-collapse: collapse;
     thead {
       background-color: var(--gray-opacity12);
       color: var(--gray600);
       font-weight: 600;
       line-height: 22px;
+      overflow: hidden;
+      border: 1px solid var(--gray-opacity28);
     }
     tbody {
       color: var(--gray800);
       font-weight: 400;
       line-height: 18px;
-      tr {
-        border-bottom: 1px solid var(--gray-opacity28);
+      td {
+        border: 1px solid var(--gray-opacity28);
       }
     }
     tr {
@@ -22,6 +25,7 @@ table {
     }
     td {
       padding: 8px;
+      box-sizing: border-box;
     }
     td:first-child {
       text-align: start;

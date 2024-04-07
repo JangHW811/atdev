@@ -2,6 +2,26 @@
   display: flex;
   position: relative;
   flex-direction: column;
+  width: 100%;
+
+  @media screen and (max-width: 768px) {
+    .paginationContainer {
+      display: none;
+    }
+  }
+  .table {
+    width: 70vw;
+    @media screen and (max-width: 768px) {
+      colgroup > col:first-child {
+        width: 52px;
+      }
+      width: 100%;
+      td:nth-child(n + 5) {
+        display: none;
+      }
+    }
+  }
+
   .titleContainer {
     .title {
       font-size: 24px;
@@ -13,6 +33,9 @@
         line-height: 24px;
       }
     }
+    @media screen and (max-width: 768px) {
+      order: -3;
+    }
   }
 
   .searchContainer {
@@ -21,9 +44,33 @@
     align-items: center;
     width: 100%;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      order: -2;
+    }
     .inputContainer {
+      position: relative;
       width: 400px;
+      align-items: center;
       display: flex;
+      > a {
+        display: none;
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        > a {
+          display: inline-block;
+          position: absolute;
+          right: 14px;
+        }
+        .input {
+          height: 38px;
+        }
+      }
+    }
+    .buttonContainer {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
     border-bottom: 1px solid var(--gray-opacity28);
   }
@@ -31,6 +78,14 @@
   .buttonContainer {
     display: flex;
     gap: 12px;
+    @media screen and (max-width: 768px) {
+      > button:first-child {
+        display: none;
+      }
+      > button:last-child {
+        flex: 1;
+      }
+    }
     &.bottomArea {
       justify-content: flex-end;
       margin-top: 28px;
@@ -43,6 +98,18 @@
         color: var(--gray900);
         background-color: unset;
       }
+    }
+  }
+
+  .selectedItemContainer {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 28px 0;
+    border-top: 1px solid var(--gray-opacity28);
+    margin-top: 28px;
+    @media screen and (max-width: 768px) {
+      order: -1;
     }
   }
 }

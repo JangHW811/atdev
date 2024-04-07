@@ -1,7 +1,5 @@
-$(document).on(
-  "change",
-  "#userSearch .searchList input[type='checkbox']",
-  function () {
+$(document).ready(() => {
+  $("#userSearch .searchList input[type='checkbox']").on("change", function () {
     const checked = $(this).prop("checked");
     if ($(this).hasClass("checkAll")) {
       $("#userSearch .searchList input[type='checkbox']").prop(
@@ -27,19 +25,21 @@ $(document).on(
         );
       }
     }
-  }
-);
-
-$(document).on("click", "#userSearch .submit", function () {
-  const callback = modalObject["userSearch"].callback;
-  const checkedList = $(
-    "#userSearch .searchList input[type='checkbox']:checked"
-  );
-  const checkedNameList = checkedList.map((item) => {
-    item.closest("tr").find(".name").text();
   });
 
-  console.log(checkedNameList);
-  callback(checkedNameList);
-  closeModal();
+  $("#userSearch .submit").on("click", function () {
+    const callback = modalObject["userSearch"]?.callback;
+    const checkedList = $(
+      "#userSearch .searchList input[type='checkbox']:checked"
+    );
+
+    const resultList = [];
+    checkedList.each((index, element) => {
+      const name = $(element).closest("tr").find(".name").text();
+      resultList.push(name);
+    });
+
+    callback && callback(resultList);
+    closeModal();
+  });
 });

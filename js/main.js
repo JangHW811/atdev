@@ -63,12 +63,12 @@ const setChart = () => {
 
 $(document).ready(() => {
   setChart();
-  showModal("userSearch");
 });
 
 $(document).on("click", ".closeCollapseButton", function () {
   const collapse = $(this).closest(".collapse");
   collapse.addClass("close");
+  $(".mobileMask").hide();
   setTimeout(() => {
     collapse.removeClass("open");
   }, 200);
@@ -77,6 +77,20 @@ $(document).on("click", ".openCollapseButton", function () {
   const collapse = $(this).closest(".collapse");
   collapse.removeClass("close");
   collapse.addClass("open");
+});
+
+$(document).on("click", ".mobileOpenCollapseButton", function () {
+  const collapse = $(".leftSection");
+  collapse.removeClass("close");
+  collapse.addClass("open");
+  $(".mobileMask").show();
+});
+
+$(document).on("click", ".mobileMask", function () {
+  const collapse = $(".leftSection");
+  collapse.removeClass("open");
+  collapse.addClass("close");
+  $(".mobileMask").hide();
 });
 
 $(document).on("click", ".paginationContainer a", function () {
@@ -100,5 +114,7 @@ $(document).on("click", ".paginationContainer a", function () {
 });
 
 $(document).on("click", ".searchUser", function () {
-  showModal("userSearch");
+  showModal("userSearch", (data) => {
+    console.log(data);
+  });
 });
