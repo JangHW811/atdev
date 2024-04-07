@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="../style/global.css" />
+    <link rel="stylesheet" type="text/css" href="../style/login.css" />
+  </head>
+  <body>
+    <section class="login">
+      <div class="loginContainer">
+        <img
+          src="../assets/images/Logo.svg"
+          alt="logo"
+          width="209"
+          height="57"
+        />
+        <div class="inputContainer">
+          <label class="subtitle2 gray600Color">ID</label>
+          <input class="input" placeholder="아이디를 입력해주세요." />
+        </div>
+        <div class="inputContainer">
+          <label class="subtitle2 gray600Color">PW</label>
+          <input class="input" placeholder="비밀번호를 입력해주세요." />
+        </div>
+        <div class="buttonContainer">
+          <button
+            class="button medium gray800Background whiteColor"
+            onClick="login()"
+          >
+            LOGIN
+          </button>
+          <button
+            class="button medium gray800Background whiteColor"
+            onClick="login()"
+          >
+            SSO LOGIN
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

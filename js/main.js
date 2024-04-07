@@ -63,9 +63,6 @@ const setChart = () => {
 
 $(document).ready(() => {
   setChart();
-  showModal("registModal", (data) => {
-    console.log(data);
-  });
 });
 
 $(document).on("click", ".closeCollapseButton", function () {
