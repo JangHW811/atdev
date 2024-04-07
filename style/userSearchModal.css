@@ -1,4 +1,4 @@
-.userSearch {
+.userSearchModal {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -73,32 +73,6 @@
       }
     }
     border-bottom: 1px solid var(--gray-opacity28);
-  }
-
-  .buttonContainer {
-    display: flex;
-    gap: 12px;
-    @media screen and (max-width: 768px) {
-      > button:first-child {
-        display: none;
-      }
-      > button:last-child {
-        flex: 1;
-      }
-    }
-    &.bottomArea {
-      justify-content: flex-end;
-      margin-top: 28px;
-      .button {
-        color: #fff;
-        background-color: var(--primary-dark);
-        width: 96px;
-      }
-      .button:first-child {
-        color: var(--gray900);
-        background-color: unset;
-      }
-    }
   }
 
   .selectedItemContainer {

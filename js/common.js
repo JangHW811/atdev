@@ -16,19 +16,23 @@ $(document).on("click", "button", function (e) {
 const modalObject = {};
 
 const showModal = (modalId, callback) => {
-  const modal = $(`#${modalId}`);
+  const modal = $("#mask").find(`#${modalId}`);
+  $("#mask").find(`:not(#${modalId})`).hide();
   $("body").addClass("showModal");
+
   const url = modal.data("url");
-  modal.load(url, function () {
-    if (callback) {
-      modalObject[modalId] = { callback };
-    }
-  });
+  modal
+    .load(url, function () {
+      if (callback) {
+        modalObject[modalId] = { callback };
+      }
+    })
+    .show();
 };
 
 const closeModal = () => {
   $("body").removeClass("showModal");
-  $(".modal").html("");
+  $(".modal").html("").hide();
 };
 
 $(document).on("click", "#mask", function () {

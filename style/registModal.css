@@ -1,0 +1,66 @@
+.registModal {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 40vw;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .registerNameContainer {
+    display: flex;
+    gap: 12px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--gray-opacity28);
+  }
+
+  > .inputContainer {
+    display: flex;
+    padding: 28px 0;
+    margin-bottom: 28px;
+    gap: 20px;
+    border-bottom: 1px solid var(--gray-opacity28);
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      padding: 18px 0;
+      margin-bottom: 18px;
+    }
+    .itemContainer {
+      > label {
+        width: 80px;
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+          font-weight: 600;
+        }
+      }
+      display: flex;
+      gap: 20px;
+      flex: 1;
+      .inputIconContainer {
+        flex: 1;
+        align-items: center;
+        > a {
+          position: absolute;
+          right: 12px;
+        }
+      }
+    }
+    .directionColumn {
+      flex: 1;
+      gap: 4px;
+    }
+    .fileUpload {
+      padding: 22px 0;
+      width: inherit;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex: 1;
+      > input {
+        display: none;
+      }
+    }
+  }
+}

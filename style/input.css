@@ -17,6 +17,9 @@ input {
       background-color: var(--gray-opacity12);
       border: 0;
     }
+    &.small {
+      height: 40px;
+    }
   }
 
   &.mobile {
@@ -28,10 +31,10 @@ input {
 .inputIconContainer {
   display: flex;
   gap: 12px;
+  position: relative;
   label {
     min-width: 88px;
   }
   input {
-    max-width: 210px;
   }
 }

@@ -87,6 +87,56 @@ body.showModal {
     }
   }
 }
+.modal {
+  > div > .titleContainer {
+    > a {
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+    .title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 36px;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+      }
+    }
+  }
+
+  > div > .buttonContainer {
+    display: flex;
+    gap: 12px;
+    @media screen and (max-width: 768px) {
+      > button:first-child {
+        display: none;
+      }
+      > button:last-child {
+        flex: 1;
+      }
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 16px 24px;
+      width: 100%;
+    }
+    &.bottomArea {
+      justify-content: flex-end;
+      margin-top: 28px;
+      .button {
+        color: #fff;
+        background-color: var(--primary-dark);
+        width: 96px;
+      }
+      .button:first-child {
+        color: var(--gray900);
+        background-color: unset;
+      }
+    }
+  }
+}
 .header {
   width: 100vw;
   height: 60px;

@@ -12,4 +12,14 @@ select {
     background: url("../assets//images//Icon/select_arrow.svg") calc(100% - 5px)
       center no-repeat;
   }
+
+  &.outline {
+    border: 1px solid var(--gray-opacity28);
+    padding: 0 34px 0 14px;
+    height: 40px;
+    border-radius: 6px;
+    flex: 1;
+    background: url("../assets//images//Icon/select_arrow.svg") calc(100% - 5px)
+      center no-repeat;
+  }
 }
