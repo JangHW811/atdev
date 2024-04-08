@@ -16,47 +16,32 @@ $(document).on("click", "button", function (e) {
 const modalObject = {};
 
 const showModal = (modalId, callback) => {
-  const modal = $("#mask").find(`#${modalId}`);
-  $("#mask").find(`:not(#${modalId})`).hide();
+  const modal = $(`#${modalId}`);
   $("body").addClass("showModal");
 
   const url = modal.data("url");
-  modal
-    .load(url, function () {
-      if (callback) {
-        modalObject[modalId] = { callback };
-      }
-    })
-    .show();
-};
 
-const showModalSecond = (modalId, callback) => {
-  const modal = $("#mask").find(`#${modalId}`);
-
-  const url = modal.data("url");
-  modal
-    .load(url, function () {
-      if (callback) {
-        modalObject[modalId] = { callback };
-      }
-    })
-    .show();
+  modal.show().load(url, function () {
+    if (callback) {
+      modalObject[modalId] = { callback };
+    }
+  });
 };
 
 const closeModal = (element) => {
-  $("body").removeClass("showModal");
-  $(element).closest(".modal").html("");
+  const target = $(element).closest(".modalWrapper");
+  target.html("").hide();
+
+  const modals = $(".modal");
+  if (modals?.length === 0) {
+    $("body").removeClass("showModal");
+  }
 };
 
-const closeModalSecond = (element) => {
-  $(element).closest(".modal2").html("");
-};
-
-$(document).on("click", "#mask", function () {
-  $("body").removeClass("showModal");
-  $(".modal").html("");
+$(document).on("click", ".mask", function () {
+  closeModal(this);
 });
 
-$(document).on("click", ".modal, .modal2", function (event) {
+$(document).on("click", ".modal, .mask", function (event) {
   event.stopPropagation();
 });

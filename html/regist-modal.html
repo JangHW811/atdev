@@ -1,107 +1,110 @@
-<link rel="stylesheet" type="text/css" href="../style/registModal.css" />
-<script src="../js/registModal.js"></script>
-
-<div class="registModal">
-  <div class="titleContainer spaceBetween">
-    <div class="title">신규 등록하기</div>
-    <a>
-      <img
-        src="../assets/images/Icon/close_mobile.svg"
-        alt="close"
-        onClick="closeModal(this)"
-      />
-    </a>
-  </div>
-  <div class="registerNameContainer">
-    <div class="body1">등록인</div>
-    <div class="subtitle1">홍길동</div>
-  </div>
-  <div class="inputContainer">
-    <div class="itemContainer">
-      <label class="h6 gray600Color">작업구분</label>
-      <select class="outline">
-        <option>선택</option>
-        <option>작업1</option>
-        <option>작업2</option>
-        <option>작업3</option>
-      </select>
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">언어</label>
-      <select class="outline">
-        <option>선택</option>
-        <option>작업1</option>
-        <option>작업2</option>
-        <option>작업3</option>
-      </select>
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">타입</label>
-      <select class="outline">
-        <option>선택</option>
-        <option>작업1</option>
-        <option>작업2</option>
-        <option>작업3</option>
-      </select>
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">참석자</label>
-      <div class="inputIconContainer">
-        <input class="input small" />
+<div class="mask">
+  <link rel="stylesheet" type="text/css" href="../style/registModal.css" />
+  <script src="../js/registModal.js"></script>
+  <div class="modal">
+    <div class="registModal">
+      <div class="titleContainer spaceBetween">
+        <div class="title">신규 등록하기</div>
         <a>
-          <img src="../assets/images/Icon/Search.svg" alt="search" />
+          <img
+            src="../assets/images/Icon/close_mobile.svg"
+            alt="close"
+            onClick="closeModal(this)"
+          />
         </a>
       </div>
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">주관부서</label>
-      <div class="inputIconContainer">
-        <input class="input small" />
-        <a>
-          <img src="../assets/images/Icon/Search.svg" alt="search" />
-        </a>
+      <div class="registerNameContainer">
+        <div class="body1">등록인</div>
+        <div class="subtitle1">홍길동</div>
       </div>
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">회의실</label>
-      <div class="inputIconContainer">
-        <input class="input small" />
-        <a>
-          <img src="../assets/images/Icon/Search.svg" alt="search" />
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="titleContainer">
-    <div class="title">회의 정보</div>
-  </div>
-
-  <div class="inputContainer">
-    <div class="itemContainer">
-      <label class="h6 gray600Color">참석자</label>
-      <input class="input" placeholder="회의록 제목을 입력해주세요." />
-    </div>
-    <div class="itemContainer">
-      <label class="h6 gray600Color">첨부</label>
-      <div class="directionColumn">
-        <label
-          for="fileupload"
-          class="fileUpload label grayOpacity12Background gray600Color"
-        >
-          <img src="../assets/images/Icon/Cloud_upload.svg" alt="upload" />
-          <div class="body2">
-            여기를 클릭하거나 파일을 올려놓으세요.<br />(첨부 가능 파일 확장자 :
-            mp4, avi...)
+      <div class="inputContainer">
+        <div class="itemContainer">
+          <label class="h6 gray600Color">작업구분</label>
+          <select class="outline">
+            <option>선택</option>
+            <option>작업1</option>
+            <option>작업2</option>
+            <option>작업3</option>
+          </select>
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">언어</label>
+          <select class="outline">
+            <option>선택</option>
+            <option>작업1</option>
+            <option>작업2</option>
+            <option>작업3</option>
+          </select>
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">타입</label>
+          <select class="outline">
+            <option>선택</option>
+            <option>작업1</option>
+            <option>작업2</option>
+            <option>작업3</option>
+          </select>
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">참석자</label>
+          <div class="inputIconContainer">
+            <input class="input small" />
+            <a>
+              <img src="../assets/images/Icon/Search.svg" alt="search" />
+            </a>
           </div>
-          <input type="file" id="fileupload" />
-        </label>
-        <div class="flexEnd body2 gray500Color">0Mb</div>
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">주관부서</label>
+          <div class="inputIconContainer">
+            <input class="input small" />
+            <a>
+              <img src="../assets/images/Icon/Search.svg" alt="search" />
+            </a>
+          </div>
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">회의실</label>
+          <div class="inputIconContainer">
+            <input class="input small" />
+            <a>
+              <img src="../assets/images/Icon/Search.svg" alt="search" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="titleContainer">
+        <div class="title">회의 정보</div>
+      </div>
+
+      <div class="inputContainer">
+        <div class="itemContainer">
+          <label class="h6 gray600Color">참석자</label>
+          <input class="input" placeholder="회의록 제목을 입력해주세요." />
+        </div>
+        <div class="itemContainer">
+          <label class="h6 gray600Color">첨부</label>
+          <div class="directionColumn">
+            <label
+              for="fileupload"
+              class="fileUpload label grayOpacity12Background gray600Color"
+            >
+              <img src="../assets/images/Icon/Cloud_upload.svg" alt="upload" />
+              <div class="body2">
+                여기를 클릭하거나 파일을 올려놓으세요.<br />(첨부 가능 파일
+                확장자 : mp4, avi...)
+              </div>
+              <input type="file" id="fileupload" />
+            </label>
+            <div class="flexEnd body2 gray500Color">0Mb</div>
+          </div>
+        </div>
+      </div>
+      <div class="buttonContainer bottomArea">
+        <button class="button large" onClick="closeModal(this)">닫기</button>
+        <button class="button large submit">등록하기</button>
       </div>
     </div>
-  </div>
-  <div class="buttonContainer bottomArea">
-    <button class="button large" onClick="closeModal(this)">닫기</button>
-    <button class="button large submit">등록하기</button>
   </div>
 </div>

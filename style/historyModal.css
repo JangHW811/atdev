@@ -3,17 +3,55 @@
   position: relative;
   flex-direction: column;
   width: 85vw;
-  max-height: 80vh;
+  max-height: 90vh;
   min-height: 40vh;
+
+  @media screen and (max-width: 768px) {
+    .titleContainer {
+      order: 0;
+    }
+    .topSubInfoContainer {
+      order: 1;
+    }
+    .keywordContainer {
+      order: 2;
+      margin-bottom: 0 !important;
+    }
+    .joinMemberContainer {
+      padding-top: 8px !important;
+      order: 3;
+    }
+    > * {
+      order: 4;
+    }
+  }
   .titleContainer {
     padding-bottom: 28px;
     border-bottom: 1px solid var(--gray-opacity28);
     align-items: center;
+    color: var(--gray800);
+    @media screen and (max-width: 768px) {
+      & {
+        flex-wrap: wrap;
+      }
+      .title {
+        order: 0;
+      }
+      a {
+        order: 1;
+      }
+      .topTextContainer {
+        order: 2;
+        width: 100%;
+        justify-content: flex-end;
+        color: var(--gray600);
+        margin-top: 8px;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
     width: 100%;
-    height: 100%;
     max-height: unset;
   }
 
@@ -26,10 +64,18 @@
     display: flex;
     align-items: center;
     gap: 80px;
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+      gap: 0;
+    }
     margin-top: 28px;
     > .subInfoItem {
       display: flex;
       gap: 12px;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   }
   .keywordContainer {
@@ -56,6 +102,11 @@
     padding: 28px 0;
     border-top: 1px solid var(--gray-opacity28);
     border-bottom: 1px solid var(--gray-opacity28);
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      border-bottom: 0;
+    }
     > article {
       flex: 1;
       .iconButton {
@@ -64,19 +115,24 @@
         gap: 4px;
         align-items: center;
       }
-    }
-    > article.scriptContainer {
-      flex: 1;
       > .innerContainer {
+        border-radius: 6px;
         display: flex;
         gap: 8px;
         flex-direction: column;
         padding: 20px;
-        background-color: var(--gray300);
-        border: 1px solid var(--gray-opacity12);
-        border-radius: 6px;
         overflow: auto;
         height: 30vh;
+        @media screen and (max-width: 768px) {
+          height: 45vh;
+        }
+      }
+    }
+    > article.scriptContainer {
+      flex: 1;
+      > .innerContainer {
+        background-color: var(--gray300);
+        border: 1px solid var(--gray-opacity12);
         > .scriptItem {
           .nameContainer {
             display: flex;
@@ -100,14 +156,8 @@
     > article.summaryContainer {
       flex: 1;
       .innerContainer {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
         background-color: var(--gray200);
         border: 1px solid var(--gray-opacity24);
-        border-radius: 6px;
-        overflow: auto;
-        height: 30vh;
         .lineInfoContainer {
           padding: 20px 0;
           gap: 8px;
@@ -176,7 +226,7 @@
     width: 100%;
     box-sizing: border-box;
     @media screen and (max-width: 768px) {
-      padding: 0 16px;
+      display: none;
     }
     button {
       background-color: unset;

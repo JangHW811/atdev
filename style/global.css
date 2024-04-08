@@ -59,7 +59,7 @@ ul {
 body.showModal {
   overflow: hidden;
 
-  #mask {
+  .mask {
     position: absolute;
     left: 0;
     top: 0;
@@ -70,29 +70,27 @@ body.showModal {
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal,
-    .modal2 {
+    .modal {
       position: absolute;
       background-color: #fff;
       padding: 40px;
       border-radius: 24px;
       width: auto;
       margin: auto;
-      @media screen and (max-width: 768px) {
-        padding: 16px;
-        width: 100vw;
-        height: 100vh;
-        max-width: unset;
-        border-radius: 0;
+      &:not(.notFullSizeInMobile) {
+        @media screen and (max-width: 768px) {
+          padding: 16px;
+          width: 100vw;
+          height: 100vh;
+          max-width: unset;
+          border-radius: 0;
+          overflow: auto;
+        }
       }
-    }
-    .modal2 {
-      box-shadow: 8px 11px 24px 6px rgba(0, 0, 0, 0.7);
     }
   }
 }
-.modal,
-.modal2 {
+.modal {
   > div > .titleContainer {
     > a {
       @media screen and (min-width: 768px) {
@@ -116,18 +114,20 @@ body.showModal {
   > div > .buttonContainer {
     display: flex;
     gap: 12px;
-    @media screen and (max-width: 768px) {
-      > button:first-child {
-        display: none;
+    &:not(.notFullSizeInMobile) {
+      @media screen and (max-width: 768px) {
+        > button:first-child {
+          display: none;
+        }
+        > button:last-child {
+          flex: 1;
+        }
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 16px 24px;
+        width: 100%;
       }
-      > button:last-child {
-        flex: 1;
-      }
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      padding: 16px 24px;
-      width: 100%;
     }
     &.bottomArea {
       justify-content: flex-end;

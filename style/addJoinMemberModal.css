@@ -1,0 +1,12 @@
+.addJoinMemberModal {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  .selectContainer {
+    margin-top: 28px;
+    width: 100%;
+    select {
+      width: inherit;
+    }
+  }
+}

@@ -1,172 +1,181 @@
-<link rel="stylesheet" type="text/css" href="../style/userSearchModal.css" />
-<script src="../js/userSearchModal.js"></script>
+<div class="mask">
+  <link rel="stylesheet" type="text/css" href="../style/userSearchModal.css" />
+  <script src="../js/userSearchModal.js"></script>
+  <div class="modal">
+    <div class="userSearchModal">
+      <div class="titleContainer spaceBetween">
+        <div class="title">사용자 검색</div>
+        <a>
+          <img
+            src="../assets/images/Icon/close_mobile.svg"
+            alt="close"
+            onClick="closeModal(this)"
+          />
+        </a>
+      </div>
 
-<div class="userSearchModal">
-  <div class="titleContainer spaceBetween">
-    <div class="title">사용자 검색</div>
-    <a>
-      <img
-        src="../assets/images/Icon/close_mobile.svg"
-        alt="close"
-        onClick="closeModal(this)"
-      />
-    </a>
-  </div>
-
-  <div class="searchContainer">
-    <div class="inputContainer">
-      <input class="input" placeholder="이름을 입력하세요." />
-      <a><img src="../assets/images/Icon/Search.svg" alt="search" /></a>
+      <div class="searchContainer">
+        <div class="inputContainer">
+          <input class="input" placeholder="이름을 입력하세요." />
+          <a><img src="../assets/images/Icon/Search.svg" alt="search" /></a>
+        </div>
+        <div class="buttonContainer">
+          <button class="button medium gray600Background">
+            <img src="../assets/images/Icon/rotate.svg" alt="refresh" />
+          </button>
+          <button class="button medium gray800Background whiteColor">
+            Search
+          </button>
+        </div>
+      </div>
+      <table class="searchList table">
+        <colgroup>
+          <!-- <col style="width: 52px"/> -->
+          <col style="" />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col />
+          <col />
+        </colgroup>
+        <thead class="subtitle2">
+          <tr>
+            <td>
+              <input type="checkbox" class="checkAll" id="checkAll" /><label
+                for="checkAll"
+              ></label>
+            </td>
+            <td>이름</td>
+            <td>부서</td>
+            <td>사번</td>
+            <td>Email</td>
+            <td>회사명</td>
+            <td>직책</td>
+          </tr>
+        </thead>
+        <tbody class="body2">
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow1" /><label
+                for="tableRow1"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow2" /><label
+                for="tableRow2"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow3" /><label
+                for="tableRow3"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow4" /><label
+                for="tableRow4"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow5" /><label
+                for="tableRow5"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow6" /><label
+                for="tableRow6"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tableRow7" /><label
+                for="tableRow7"
+              ></label>
+            </td>
+            <td class="name">홍길동</td>
+            <td>개발팀</td>
+            <td>A19283</td>
+            <td>email@atdev.co.kr</td>
+            <td>주식회사 삼성 에스디에스</td>
+            <td>프로</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="paginationContainer">
+        <a class="prev"
+          ><img src="../assets/images/Icon/left.svg" alt="more"
+        /></a>
+        <a class="caption active">1</a>
+        <a class="caption">2</a>
+        <a class="caption">3</a>
+        <a class="caption">4</a>
+        <a class="caption">5</a>
+        <a class="next"
+          ><img src="../assets/images/Icon/right.svg" alt="more"
+        /></a>
+      </div>
+      <div class="selectedItemContainer">
+        <label class="label large primaryOpacity12Background primaryDarkColor"
+          >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a>
+        </label>
+        <label class="label large primaryOpacity12Background primaryDarkColor"
+          >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
+        ></label>
+        <label class="label large primaryOpacity12Background primaryDarkColor"
+          >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
+        ></label>
+      </div>
+      <div class="buttonContainer bottomArea">
+        <button class="button large" onClick="closeModal(this)">닫기</button>
+        <button class="button large submit">확인</button>
+      </div>
     </div>
-    <div class="buttonContainer">
-      <button class="button medium gray600Background">
-        <img src="../assets/images/Icon/rotate.svg" alt="refresh" />
-      </button>
-      <button class="button medium gray800Background whiteColor">Search</button>
-    </div>
-  </div>
-  <table class="searchList table">
-    <colgroup>
-      <!-- <col style="width: 52px"/> -->
-      <col style="" />
-      <col />
-      <col />
-      <col />
-      <col />
-      <col />
-      <col />
-    </colgroup>
-    <thead class="subtitle2">
-      <tr>
-        <td>
-          <input type="checkbox" class="checkAll" id="checkAll" /><label
-            for="checkAll"
-          ></label>
-        </td>
-        <td>이름</td>
-        <td>부서</td>
-        <td>사번</td>
-        <td>Email</td>
-        <td>회사명</td>
-        <td>직책</td>
-      </tr>
-    </thead>
-    <tbody class="body2">
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow1" /><label
-            for="tableRow1"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow2" /><label
-            for="tableRow2"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow3" /><label
-            for="tableRow3"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow4" /><label
-            for="tableRow4"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow5" /><label
-            for="tableRow5"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow6" /><label
-            for="tableRow6"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-      <tr>
-        <td>
-          <input type="checkbox" id="tableRow7" /><label
-            for="tableRow7"
-          ></label>
-        </td>
-        <td class="name">홍길동</td>
-        <td>개발팀</td>
-        <td>A19283</td>
-        <td>email@atdev.co.kr</td>
-        <td>주식회사 삼성 에스디에스</td>
-        <td>프로</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="paginationContainer">
-    <a class="prev"><img src="../assets/images/Icon/left.svg" alt="more" /></a>
-    <a class="caption active">1</a>
-    <a class="caption">2</a>
-    <a class="caption">3</a>
-    <a class="caption">4</a>
-    <a class="caption">5</a>
-    <a class="next"><img src="../assets/images/Icon/right.svg" alt="more" /></a>
-  </div>
-  <div class="selectedItemContainer">
-    <label class="label large primaryOpacity12Background primaryDarkColor"
-      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a>
-    </label>
-    <label class="label large primaryOpacity12Background primaryDarkColor"
-      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
-    ></label>
-    <label class="label large primaryOpacity12Background primaryDarkColor"
-      >홍길동 <a><img src="../assets/images/Icon/filled/close.svg" /></a
-    ></label>
-  </div>
-  <div class="buttonContainer bottomArea">
-    <button class="button large" onClick="closeModal(this)">닫기</button>
-    <button class="button large submit">확인</button>
   </div>
 </div>

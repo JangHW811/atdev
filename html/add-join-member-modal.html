@@ -1,25 +1,33 @@
-<link rel="stylesheet" type="text/css" href="../style/faqModal.css" />
-<script src="../js/faqModal.js"></script>
-
-<div class="faqModal">
-  <div class="titleContainer spaceBetween">
-    <div class="title">참여자 추가하기</div>
-    <a>
-      <img
-        src="../assets/images/Icon/close_mobile.svg"
-        alt="close"
-        onClick="closeModalSecond(this)"
-      />
-    </a>
-  </div>
-  <select class="outline">
-    <option>선택해주세요</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-  </select>
-  <div class="buttonContainer bottomArea">
-    <button class="button large" onClick="closeModalSecond(this)">닫기</button>
-    <button class="button large submit">등록하기</button>
+<div class="mask">
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="../style/addJoinMemberModal.css"
+  />
+  <div class="modal notFullSizeInMobile">
+    <div class="addJoinMemberModal">
+      <div class="titleContainer spaceBetween">
+        <div class="title">참여자 추가하기</div>
+        <a>
+          <img
+            src="../assets/images/Icon/close_mobile.svg"
+            alt="close"
+            onClick="closeModal(this)"
+          />
+        </a>
+      </div>
+      <div class="selectContainer">
+        <select class="outline">
+          <option>선택해주세요</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+      </div>
+      <div class="buttonContainer bottomArea notFullSizeInMobile">
+        <button class="button large" onClick="closeModal(this)">닫기</button>
+        <button class="button large submit">등록하기</button>
+      </div>
+    </div>
   </div>
 </div>
