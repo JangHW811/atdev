@@ -25,6 +25,7 @@
   <body>
     공통 컬러값은 palette.css에 정의되어 있습니다.
     <section class="container">
+      ㅐ
       <div class="title">button</div>
       <button class="button large">날 눌러줘</button>
       <button class="button medium">날 눌러줘</button>
@@ -80,5 +81,50 @@
         disabled
       />
     </section>
+    <section class="container">
+      <div class="title">modal</div>
+      <button class="button large" onClick="showModal('addJoinMemberModal')">
+        참여자 추가하기
+      </button>
+      <button class="button large" onClick="showModal('faqModal')">FAQ</button>
+      <button class="button large" onClick="showModal('historyModal')">
+        이력
+      </button>
+      <button class="button large" onClick="showModal('historyVideoModal')">
+        이력(비디오)
+      </button>
+      <button class="button large" onClick="showModal('registModal')">
+        등록
+      </button>
+      <button class="button large" onClick="showModal('userSearch')">
+        유저 검색
+      </button>
+    </section>
+    <div
+      class="modalWrapper"
+      id="userSearch"
+      data-url="user-search-modal.html"
+    ></div>
+    <div
+      class="modalWrapper"
+      id="registModal"
+      data-url="regist-modal.html"
+    ></div>
+    <div class="modalWrapper" id="faqModal" data-url="faq-modal.html"></div>
+    <div
+      class="modalWrapper"
+      id="historyModal"
+      data-url="history-modal.html"
+    ></div>
+    <div
+      class="modalWrapper"
+      id="historyVideoModal"
+      data-url="history-video-modal.html"
+    ></div>
+    <div
+      class="modalWrapper"
+      id="addJoinMemberModal"
+      data-url="add-join-member-modal.html"
+    ></div>
   </body>
 </html>
