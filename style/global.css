@@ -70,7 +70,9 @@ body.showModal {
     display: flex;
     justify-content: center;
     align-items: center;
-    .modal {
+    .modal,
+    .modal2 {
+      position: absolute;
       background-color: #fff;
       padding: 40px;
       border-radius: 24px;
@@ -84,9 +86,13 @@ body.showModal {
         border-radius: 0;
       }
     }
+    .modal2 {
+      box-shadow: 8px 11px 24px 6px rgba(0, 0, 0, 0.7);
+    }
   }
 }
-.modal {
+.modal,
+.modal2 {
   > div > .titleContainer {
     > a {
       @media screen and (min-width: 768px) {
@@ -184,6 +190,7 @@ body.showModal {
 .spaceBetween {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .flexEnd {

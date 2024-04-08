@@ -40,6 +40,6 @@ $(document).ready(() => {
     });
 
     callback && callback(resultList);
-    closeModal();
+    closeModal(this);
   });
 });

@@ -30,9 +30,26 @@ const showModal = (modalId, callback) => {
     .show();
 };
 
-const closeModal = () => {
+const showModalSecond = (modalId, callback) => {
+  const modal = $("#mask").find(`#${modalId}`);
+
+  const url = modal.data("url");
+  modal
+    .load(url, function () {
+      if (callback) {
+        modalObject[modalId] = { callback };
+      }
+    })
+    .show();
+};
+
+const closeModal = (element) => {
   $("body").removeClass("showModal");
-  $(".modal").html("").hide();
+  $(element).closest(".modal").html("");
+};
+
+const closeModalSecond = (element) => {
+  $(element).closest(".modal2").html("");
 };
 
 $(document).on("click", "#mask", function () {
@@ -40,6 +57,6 @@ $(document).on("click", "#mask", function () {
   $(".modal").html("");
 });
 
-$(document).on("click", ".modal", function (event) {
+$(document).on("click", ".modal, .modal2", function (event) {
   event.stopPropagation();
 });

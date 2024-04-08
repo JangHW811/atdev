@@ -63,7 +63,7 @@ const setChart = () => {
 
 $(document).ready(() => {
   setChart();
-  showModal("faqModal", (data) => {
+  showModal("historyModal", (data) => {
     console.log(data);
   });
 });
@@ -129,6 +129,11 @@ $(document).on("click", ".regist", function () {
 });
 $(document).on("click", ".faqButton", function () {
   showModal("faqModal", (data) => {
+    console.log(data);
+  });
+});
+$(document).on("click", ".historyButton", function () {
+  showModal("historyModal", (data) => {
     console.log(data);
   });
 });
