@@ -91,6 +91,8 @@ body.showModal {
   }
 }
 .modal {
+  max-height: 90vh;
+  overflow: auto;
   > div > .titleContainer {
     > a {
       @media screen and (min-width: 768px) {

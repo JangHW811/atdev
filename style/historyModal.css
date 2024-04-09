@@ -3,7 +3,6 @@
   position: relative;
   flex-direction: column;
   width: 85vw;
-  max-height: 90vh;
   min-height: 40vh;
 
   @media screen and (max-width: 768px) {
