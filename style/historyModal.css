@@ -68,7 +68,7 @@
       justify-content: space-between;
       gap: 0;
     }
-    margin-top: 28px;
+    margin-top: 10px;
     > .subInfoItem {
       display: flex;
       gap: 12px;
@@ -80,7 +80,7 @@
   }
   .keywordContainer {
     padding: 16px;
-    margin: 28px 0;
+    margin: 10px 0;
     background-color: var(--primary-opacity4);
     border-radius: 4px;
     > .itemContainer {
@@ -99,10 +99,11 @@
   .contentsContainer {
     display: flex;
     gap: 28px;
-    padding: 28px 0;
+    padding-bottom: 18px;
     border-top: 1px solid var(--gray-opacity28);
     border-bottom: 1px solid var(--gray-opacity28);
     .innerTitleContainer {
+      display: flex;
       height: 48px;
       align-items: center;
     }
@@ -125,7 +126,10 @@
         flex-direction: column;
         padding: 20px;
         overflow: auto;
-        height: 45vh;
+        height: 40vh;
+        @media screen and (max-width: 768px) {
+          height: 45vh;
+        }
       }
     }
     > article.scriptContainer {
@@ -233,7 +237,7 @@
     }
   }
   .joinMemberContainer {
-    padding-top: 28px;
+    padding-top: 18px;
     .memeberListButtonContainer {
       .memberListContainer {
         gap: 12px;
@@ -256,7 +260,7 @@
     }
   }
   .bottomButton {
-    margin-top: 28px;
+    margin-top: 18px;
     width: 100%;
     box-sizing: border-box;
     @media screen and (max-width: 768px) {
