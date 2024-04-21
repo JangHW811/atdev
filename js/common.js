@@ -57,7 +57,6 @@ const hideLoading = () => {
 };
 
 const updateProgress = (progressNumber) => {
-  console.log("update", progressNumber);
   $("#progressWrapper progress").val(progressNumber);
   $("#progressWrapper .percent").text(progressNumber);
 };
