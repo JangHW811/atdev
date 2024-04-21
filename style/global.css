@@ -59,7 +59,8 @@ ul {
 body.showModal {
   overflow: hidden;
 
-  .mask {
+  .mask,
+  .loading-mask {
     position: absolute;
     left: 0;
     top: 0;
@@ -73,7 +74,7 @@ body.showModal {
     .modal {
       position: absolute;
       background-color: #fff;
-      padding: 40px;
+      padding: 20px;
       border-radius: 24px;
       width: auto;
       margin: auto;
@@ -88,10 +89,59 @@ body.showModal {
         }
       }
     }
+    .loading-spinner {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 10px solid var(--primary-lighter);
+      border-top: 10px solid var(--primary);
+      animation: spin 1s linear infinite;
+    }
+    .progressContainer {
+      width: 300px;
+      gap: 8px;
+      #progress {
+        appearance: none;
+      }
+
+      #progress::-webkit-progress-bar {
+        background: var(--primary-lighter);
+        border-radius: 12px;
+        border: 1px solid var(--primary-dark);
+        height: 18px;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      #progress::-webkit-progress-value {
+        background: var(--primary-dark);
+        border-radius: 0px;
+        height: 28px;
+        width: 48px;
+      }
+    }
+  }
+}
+#loadingWrapper {
+  display: none;
+}
+#progressWrapper {
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 .modal {
   max-height: 90vh;
+  @media screen and (max-width: 768px) {
+    max-height: 100vh;
+  }
   overflow: auto;
   > div > .titleContainer {
     > a {
@@ -146,6 +196,7 @@ body.showModal {
     }
   }
 }
+
 .header {
   width: 100vw;
   height: 60px;

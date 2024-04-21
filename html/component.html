@@ -25,7 +25,6 @@
   <body>
     공통 컬러값은 palette.css에 정의되어 있습니다.
     <section class="container">
-      ㅐ
       <div class="title">button</div>
       <button class="button large">날 눌러줘</button>
       <button class="button medium">날 눌러줘</button>
@@ -100,6 +99,35 @@
         유저 검색
       </button>
     </section>
+    <section class="container">
+      <div class="title">Loading</div>
+      <button class="button large" onClick="showLoading()">로딩</button>
+      <div>
+        <button class="button large" onClick="showSampleProgress()">
+          progress
+        </button>
+      </div>
+      <script>
+        function showSampleProgress() {
+          showProgress();
+          let progress = 0;
+          // progress를 1씩 증가시키면서 100까지 자동으로 증가시킵니다. 샘플로 작성한 코드입니다.
+          // 실제로는 api호출후 updateProgress(progress)를 호출하여 진행상황을 업데이트 해야합니다.
+          // progress가 100이 되면 hideProgress()를 호출하여 로딩바를 숨깁니다.
+          const progressLifeCycle = () => {
+            const interval = setInterval(() => {
+              progress++;
+              updateProgress(progress);
+              if (progress === 100) {
+                clearInterval(interval);
+                hideProgress();
+              }
+            }, 10);
+          };
+          progressLifeCycle();
+        }
+      </script>
+    </section>
     <div
       class="modalWrapper"
       id="userSearch"
@@ -126,5 +154,18 @@
       id="addJoinMemberModal"
       data-url="add-join-member-modal.html"
     ></div>
+    <div id="loadingWrapper">
+      <div class="loading-mask">
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+    <div id="progressWrapper">
+      <div class="loading-mask">
+        <div class="directionColumn alignCenter progressContainer">
+          <div class="h4 primaryDarkColor"><span class="percent">0</span>%</div>
+          <progress id="progress" max="100" value="0"></progress>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

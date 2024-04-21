@@ -45,3 +45,29 @@ $(document).on("click", ".mask", function () {
 $(document).on("click", ".modal, .mask", function (event) {
   event.stopPropagation();
 });
+
+const showLoading = () => {
+  $("#loadingWrapper").show();
+  $("body").addClass("showModal");
+};
+
+const hideLoading = () => {
+  $("#loadingWrapper").hide();
+  $("body").removeClass("showModal");
+};
+
+const updateProgress = (progressNumber) => {
+  console.log("update", progressNumber);
+  $("#progressWrapper progress").val(progressNumber);
+  $("#progressWrapper .percent").text(progressNumber);
+};
+
+const showProgress = () => {
+  $("#progressWrapper").show();
+  $("body").addClass("showModal");
+};
+
+const hideProgress = () => {
+  $("#progressWrapper").hide();
+  $("body").removeChild("showModal");
+};
