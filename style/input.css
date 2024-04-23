@@ -20,6 +20,18 @@ input {
     &.small {
       height: 40px;
     }
+    &.date {
+      height: 40px;
+      border: 1px solid var(--primary-opacity48);
+      color: var(--primary-dark);
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 24px;
+      text-align: center;
+      &::-webkit-calendar-picker-indicator {
+        background-image: url("../assets/images/Icon/filled/calendar-dates.svg");
+      }
+    }
   }
 
   &.mobile {
