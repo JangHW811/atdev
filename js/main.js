@@ -119,6 +119,13 @@ $(document).on("click", ".searchUser", function () {
   });
 });
 
+$(document).on("click", ".registDate", function () {
+  $(this).children("input[type=date]").get(0).showPicker();
+});
+$(document).on("change", ".registDate input[type=date]", function () {
+  $(this).parent("button.registDate").children(".dateText").text($(this).val());
+});
+
 $(document).on("click", ".regist", function () {
   showModal("registModal", (data) => {
     console.log(data);

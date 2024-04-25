@@ -10,7 +10,7 @@
     }
   }
   .table {
-    width: 70vw;
+    width: auto;
     @media screen and (max-width: 768px) {
       colgroup > col:first-child {
         width: 52px;
