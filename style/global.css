@@ -305,3 +305,7 @@ body.showModal {
   width: 0;
   height: 0;
 }
+
+.relative {
+  position: relative;
+}

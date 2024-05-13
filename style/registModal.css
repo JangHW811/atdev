@@ -70,4 +70,8 @@
     gap: 12px;
     flex-wrap: wrap;
   }
+  .removeFile {
+    position: absolute;
+    right: 0;
+  }
 }
