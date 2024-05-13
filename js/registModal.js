@@ -33,7 +33,6 @@ $(document).ready(() => {
 
   $("#fileupload").on("change", function () {
     const files = $(this).prop("files");
-    console.log("??A?A??", files);
     $(this).closest(".fileDrop").find(".fileUploadTemplate").hide();
     $(this).closest(".fileDrop").find(".fileName").show().append(files[0].name);
     $(this)
