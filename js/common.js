@@ -20,7 +20,9 @@ const showModal = (modalId, callback) => {
   $("body").addClass("showModal");
 
   const url = modal.data("url");
-
+  modal.css({
+    "z-index": $(".mask").length + 1,
+  });
   modal.show().load(url, function () {
     if (callback) {
       modalObject[modalId] = { callback };
