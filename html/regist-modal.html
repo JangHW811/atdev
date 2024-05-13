@@ -51,7 +51,11 @@
             <div class="inputIconContainer">
               <input class="input small" />
               <a>
-                <img src="../assets/images/Icon/Search.svg" alt="search" />
+                <img
+                  src="../assets/images/Icon/Search.svg"
+                  alt="search"
+                  onClick="showModal('userSearch')"
+                />
               </a>
             </div>
             <div class="selectedItemContainer">
@@ -107,16 +111,24 @@
           <div class="directionColumn">
             <label
               for="fileupload"
-              class="fileUpload label grayOpacity12Background gray600Color"
+              class="fileUpload label grayOpacity12Background gray600Color fileDrop"
             >
-              <img src="../assets/images/Icon/Cloud_upload.svg" alt="upload" />
-              <div class="body2">
-                여기를 클릭하거나 파일을 올려놓으세요.<br />(첨부 가능 파일
-                확장자 : mp4, avi...)
+              <div class="fileUploadTemplate flex">
+                <img
+                  src="../assets/images/Icon/Cloud_upload.svg"
+                  alt="upload"
+                />
+                <div class="body2">
+                  여기를 클릭하거나 파일을 올려놓으세요.<br />(첨부 가능 파일
+                  확장자 : mp4, avi...)
+                </div>
               </div>
+              <div class="fileName body2"></div>
               <input type="file" id="fileupload" />
             </label>
-            <div class="flexEnd body2 gray500Color">0Mb</div>
+            <div class="flexEnd body2 gray500Color">
+              <span class="fileSize">0</span>Mb
+            </div>
           </div>
         </div>
       </div>

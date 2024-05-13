@@ -51,12 +51,14 @@
       gap: 4px;
     }
     .fileUpload {
+      > .fileUploadTemplate {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+      }
       padding: 22px 0;
       width: inherit;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
       flex: 1;
       > input {
         display: none;
